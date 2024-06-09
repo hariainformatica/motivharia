@@ -6,11 +6,11 @@ import re
 import csv
 
 #read the file
-with open('original/frases.clean.txt', 'r') as f:
+with open('../../original/frases.clean.txt', 'r') as f:
     frases = f.readlines()
 
 #initialize the csv file
-with open('data/frases.clean.csv', 'w') as csvfile:
+with open('../../data/frases.clean.csv', 'w') as csvfile:
     fieldnames = ['frase', 'autor']
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames, delimiter='|')
     writer.writeheader()
