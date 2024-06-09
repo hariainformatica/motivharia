@@ -3,7 +3,7 @@ import re
 autores = []
 regex = r"(?<=\().*(?=\))"
 
-with open('frases.txt', 'r') as file:
+with open('frases.1.txt', 'r') as file:
     test_str = file.read()
 
 matches = re.finditer(regex, test_str, re.MULTILINE)

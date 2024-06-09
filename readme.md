@@ -52,3 +52,7 @@ La estructura del archivo frases.txt es:
 Usaremos un script en python con expresiones regulares para extraer los autores
 La expresión regular la construimos usando:
 https://regex101.com/codegen?language=python
+
+En frases.1.txt colocamos el texto corregido con autores escritos bien y se construye el listado de autores.txt
+
+### Construir csv con frases y el id del autor
