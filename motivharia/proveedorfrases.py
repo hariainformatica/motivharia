@@ -3,12 +3,16 @@ from motivharia.proveedorfrasescsv import ProveedorFrasesCSV
 from motivharia.listafrases import ListaFrases
 from motivharia.frase import Frase
 
+from motivharia.proveedorautores import ProveedorAutores
+
 class ProveedorFrases:
     def __init__(self, tipo, autosave=False):
+        self.proveedorAutores = ProveedorAutores(tipo, autosave)
+
         if tipo == 'sql':
-            self.proveedor = ProveedorFrasesSQL()
+            self.proveedor = ProveedorFrasesSQL(self.proveedorAutores)
         elif tipo == 'csv':
-            self.proveedor = ProveedorFrasesCSV()
+            self.proveedor = ProveedorFrasesCSV(self.proveedorAutores)
 
         self.tipo       = tipo
         self.autosave   = autosave
@@ -23,8 +27,13 @@ class ProveedorFrases:
     def getFrasePorId(self, id)->Frase:
         return self.frases.getFrasePorId(id)
 
-    def createFrase(self, frase, autor)->Frase:
+    def createFrase(self, frase:str, aut:str)->Frase:
         resultado = None
+        autor = self.proveedorAutores.getAutor(aut)
+        if autor == None:
+            autor = self.proveedorAutores.createAutor(aut)
+            self.proveedorAutores.close()
+
         if (self.getFrase(frase, autor) == None):
             resultado = self.frases.create(Frase(self.frases.getNewId(), frase, autor))
         

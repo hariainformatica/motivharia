@@ -4,7 +4,7 @@ from motivharia.listaautores import ListaAutores
 from motivharia.autor import Autor
 
 class ProveedorAutores:
-    def __init__(self, tipo:str, autosave=False:bool):
+    def __init__(self, tipo:str, autosave:bool=False):
         if tipo == 'sql':
             self.proveedor = ProveedorAutoresSQL()
         elif tipo == 'csv':

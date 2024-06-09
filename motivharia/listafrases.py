@@ -4,8 +4,13 @@ class ListaFrases:
     def __init__(self):
         self.frases = []
 
-    def create(self, frase, autor)->Frase:
-        self.frases.append(Frase(frase, autor))
+    def create(self, frase)->Frase:
+        if type(frase) != Frase:
+            raise TypeError("frase must be a Frase object")
+
+        if frase not in self.frases:
+            return self.frases.append(frase)
+        return None
 
     def read(self)->list:
         return self.frases
