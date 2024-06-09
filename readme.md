@@ -53,6 +53,10 @@ Usaremos un script en python con expresiones regulares para extraer los autores
 La expresión regular la construimos usando:
 https://regex101.com/codegen?language=python
 
-En frases.1.txt colocamos el texto corregido con autores escritos bien y se construye el listado de autores.txt
+En frases.clean.txt colocamos el texto corregido con autores escritos bien y se construye el listado de autores.csv
 
-### Construir csv con frases y el id del autor
+### 3 Construir csv con frases y el id del autor
+Creamos el archivo de frases.csv desde frases.clean.txt y sustituyendo los autores por el autor_id de autores.csv
+
+### 4 Construir tablas en sqlite desde el csv
+Construimos las tablas en una base de datos sqlite
