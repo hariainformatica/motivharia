@@ -4,7 +4,7 @@ from motivharia.listaautores import ListaAutores
 from motivharia.autor import Autor
 
 class ProveedorAutores:
-    def __init__(self, tipo, autosave=False):
+    def __init__(self, tipo:str, autosave=False:bool):
         if tipo == 'sql':
             self.proveedor = ProveedorAutoresSQL()
         elif tipo == 'csv':
@@ -17,13 +17,13 @@ class ProveedorAutores:
     def getAutores(self)->ListaAutores:
         return self.autores
 
-    def getAutor(self, nombre)->Autor:
+    def getAutor(self, nombre:str)->Autor:
         return self.autores.getAutor(nombre)
 
-    def getAutorPorId(self, id)->Autor:
+    def getAutorPorId(self, id:int)->Autor:
         return self.autores.getAutorPorId(id)
 
-    def createAutor(self, nombre)->Autor:
+    def createAutor(self, nombre:str)->Autor:
         resultado = None
         if (self.getAutor(nombre) == None):
             resultado = self.autores.create(Autor(self.autores.getNewId(), nombre))
@@ -37,7 +37,7 @@ class ProveedorAutores:
         
         return resultado
 
-    def updateAutor(self, nombre, nuevo_nombre)->Autor:
+    def updateAutor(self, nombre:str, nuevo_nombre:str)->Autor:
         resultado = None
         if (self.getAutor(nuevo_nombre) == None):
             resultado = self.autores.update(nombre, nuevo_nombre)
@@ -51,7 +51,7 @@ class ProveedorAutores:
         
         return resultado
 
-    def deleteAutor(self, nombre)->Autor:
+    def deleteAutor(self, nombre:str)->Autor:
         resultado = self.autores.delete(nombre)
         
         if self.autosave and resultado != None:

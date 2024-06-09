@@ -3,7 +3,7 @@ class Autor:
         self.id = int(id)
         self.nombre = nombre
 
-    def read(self):
+    def read(self) -> str:
         return str(self.id) + "|" + str(self.nombre)
     
     def __str__(self) -> str:
