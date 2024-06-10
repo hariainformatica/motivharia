@@ -5,7 +5,7 @@ import os
 autores = []
 regex = r"(?<=\().*(?=\))"
 
-with open(os.path.realpath('../../original/frases.clean.txt'), 'r', encoding='utf-8') as file:
+with open(os.path.realpath('../original/frases.clean.txt'), 'r', encoding='utf-8') as file:
     test_str = file.read()
 
 matches = re.finditer(regex, test_str, re.MULTILINE)

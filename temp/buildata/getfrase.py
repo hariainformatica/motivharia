@@ -11,7 +11,7 @@ with open(os.path.realpath('../../data/autores.csv'), 'r') as f:
 
 # Leer frases.1.csv y almacenar la información en una lista
 frases = []
-with open(os.path.realpath('../../data/frases.clean.csv'), 'r', encoding='utf-8', newline='') as f:
+with open(os.path.realpath('../original/frases.clean.csv'), 'r', encoding='utf-8', newline='') as f:
     reader = csv.reader(f, delimiter='|')
     for row in reader:
         frase, autor = row

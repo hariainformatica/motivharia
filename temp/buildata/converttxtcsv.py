@@ -7,11 +7,11 @@ import csv
 import os
 
 #read the file
-with open('../../original/frases.clean.txt', 'r', encoding='utf-8') as f:
+with open('../original/frases.clean.txt', 'r', encoding='utf-8') as f:
     frases = f.readlines()
 
 #initialize the csv file
-with open(os.path.relpath('../../data/frases.clean.csv'), 'w', encoding='utf-8', newline='') as csvfile:
+with open(os.path.relpath('../original/frases.clean.csv'), 'w', encoding='utf-8', newline='') as csvfile:
     fieldnames = ['frase', 'autor']
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames, delimiter='|')
     writer.writeheader()
