@@ -29,10 +29,16 @@ class ProveedorDatos:
 
 #Pantalla de Autores - Modificar
 
+    def modificarGetAutor(self, autor:str) ->str:
+        pass
+
     def modificarAutor(self, autor:str, novo_autor:str) ->str:
         pass
 
 #Pantalla de Autores - Eliminar
+
+    #def eliminarGetAutor(self, autor:str) ->str:
+    #    pass
 
     def eliminarAutor(self, autor:str) ->str:
         pass
