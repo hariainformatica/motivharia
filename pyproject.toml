@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "motivharia"
+version = "0.1.0"
+description = ""
+authors = ["Haría Emilio <haria.informatica@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+textual = "^0.66.0"
+
+[tool.poetry.group.dev.dependencies]
+textual-dev = "^1.5.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
