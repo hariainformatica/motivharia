@@ -3,14 +3,13 @@ from motivharia.model.autor import Autor
 
 @pytest.fixture
 def autor():
-    return Autor("John Doe")
+    return Autor(1, "John Doe")
 
 @pytest.mark.parametrize("nombre, expected_result", [
-    ("John Doe", "John Doe"),
-    ("Jane Smith", "Jane Smith"),
-    ("Alice Johnson", "Alice Johnson")
+    ("John Doe", "1|John Doe"),
+    ("Jane Smith", "1|Jane Smith"),
+    ("Alice Johnson", "1|Alice Johnson")
 ])
-
 def test_autor_read(autor, nombre, expected_result):
     autor.update(nombre)
     assert autor.read() == expected_result
