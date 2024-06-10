@@ -1,0 +1,10 @@
+# Configuración de motivharia
+
+title = "Motivharia"
+
+# Configuración de la base de datos
+[database]
+type = "csv" # type = "sqlite|csv"
+
+[info]
+description = "Motivharia es una aplicación para ayudar en la motivación de las personas."
