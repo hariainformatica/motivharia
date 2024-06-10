@@ -8,7 +8,7 @@ from motivharia.view.frasestablasscreen import FrasesTablaScreen
 from motivharia.view.acercascreen import AcercaScreen
 
 
-class MiAplicacion(App):
+class Aplicacion(App):
     MODES = {
         "PrincipalScreen": PrincipalScreen,
         "AutoresTablaScreen": AutoresTablaScreen,
@@ -33,5 +33,5 @@ class MiAplicacion(App):
         self.push_screen("SplashScreen")
         
 
-app = MiAplicacion()
+app = Aplicacion()
 app.run()
