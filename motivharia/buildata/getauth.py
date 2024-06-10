@@ -1,10 +1,11 @@
 import re
 import csv
+import os
 
 autores = []
 regex = r"(?<=\().*(?=\))"
 
-with open('../../original/frases.clean.txt', 'r') as file:
+with open(os.path.realpath('../../original/frases.clean.txt'), 'r', encoding='utf-8') as file:
     test_str = file.read()
 
 matches = re.finditer(regex, test_str, re.MULTILINE)
@@ -19,7 +20,7 @@ print("\n\n\nAutores:\n----------")
 cont = 1
 autores.sort()
 
-with open('../../data/autores.csv', 'w', newline='') as file:
+with open(os.path.realpath('../../data/autores.csv'), 'w', newline='', encoding='utf-8') as file:
     writer = csv.writer(file, delimiter='|')
     
     for autor in autores:

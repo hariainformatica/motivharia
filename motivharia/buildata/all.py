@@ -1,12 +1,27 @@
 import subprocess
+import platform
+import os
+import shutil
 
 #limpiar los archivos del directorio data
-subprocess.run(['rm', '-rf', '../../data'])
+# Comprobar si existe el directorio
+if os.path.exists('../../data'):
+    if platform.system() == 'Windows':
+        shutil.rmtree('../../data',)
+    else:
+        subprocess.run(['rm', '-rf', '../../data'])
+
 #esperar hasta que se eliminen los archivos
-subprocess.run(['sleep', '2'])
+if platform.system() == 'Windows':
+    subprocess.run(['timeout', '/t', '2'])
+else:
+    subprocess.run(['sleep', '2'])
 
 #crear directorio ../data
-subprocess.run(['mkdir', '../../data'])
+if platform.system() == 'Windows':
+    os.mkdir('../../data')
+else:
+    subprocess.run(['mkdir', '../../data'])
 
 # Ejecutar converttxtcsv.py
 subprocess.run(['python', './converttxtcsv.py'])

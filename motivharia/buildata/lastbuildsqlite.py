@@ -1,8 +1,9 @@
 import sqlite3
 import csv
+import os
 
 # Conexión a la base de datos
-conn = sqlite3.connect('../../data/database.db')
+conn = sqlite3.connect(os.path.realpath('../../data/database.db'))
 cursor = conn.cursor()
 
 # Crear tabla autor
@@ -30,7 +31,7 @@ cursor.execute('''
 ''')
 
 # Leer archivo frases.csv y insertar datos en la tabla frase
-with open('../../data/frases.csv', 'r') as file:
+with open('../../data/frases.csv', 'r', encoding='utf-8') as file:
     reader = csv.reader(file, delimiter='|')
     for row in reader:
         cursor.execute('INSERT INTO frase (frase, autor_id) VALUES (?, ?)', row)

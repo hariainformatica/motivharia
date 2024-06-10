@@ -4,13 +4,14 @@
 
 import re
 import csv
+import os
 
 #read the file
-with open('../../original/frases.clean.txt', 'r') as f:
+with open('../../original/frases.clean.txt', 'r', encoding='utf-8') as f:
     frases = f.readlines()
 
 #initialize the csv file
-with open('../../data/frases.clean.csv', 'w') as csvfile:
+with open(os.path.relpath('../../data/frases.clean.csv'), 'w', encoding='utf-8', newline='') as csvfile:
     fieldnames = ['frase', 'autor']
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames, delimiter='|')
     writer.writeheader()
@@ -23,7 +24,7 @@ with open('../../data/frases.clean.csv', 'w') as csvfile:
             frase = match.group(1).strip()
             autor = match.group(2).strip()
             #write to the csv file
-            writer.writerow({'frase': frase, 'autor': autor})
+            writer.writerow({'frase': frase, 'autor': autor.strip()})
         else:
             print(frase)
 
