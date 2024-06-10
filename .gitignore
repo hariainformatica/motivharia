@@ -3,5 +3,6 @@ __pycache__/
 */__pycache__
 .pytest_cache/
 .env/
+.conda/
 *.lock
 temp/original/frases.clean.txt

@@ -65,5 +65,6 @@ Construimos las tablas en una base de datos sqlite
 
 ## Conda
 conda env create -p ./.env -f environment.yml
+conda install conda-forge::poetry
 ## Poetry
 poetry install
