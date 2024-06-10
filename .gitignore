@@ -1,5 +1,7 @@
-data/
-__pycache__/
-.env/
 .pytest_cache/
 *.lock
+__pycache__/
+*/__pycache__
+.pytest_cache/
+.vscode/
+.env/
