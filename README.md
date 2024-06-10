@@ -62,3 +62,8 @@ Creamos el archivo de frases.csv desde frases.clean.txt y sustituyendo los autor
 Construimos las tablas en una base de datos sqlite
 
 ## UI
+
+## Conda
+conda env create -p ./.env -f environment.yml
+## Poetry
+poetry install

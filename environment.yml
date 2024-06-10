@@ -1,8 +1,8 @@
-name: ./.env
+name: .env
 channels:
   - microsoft
   - conda-forge
   - defaults
 dependencies:
   - poetry
-prefix: ./.env
+prefix: .env
