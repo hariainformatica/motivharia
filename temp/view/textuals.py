@@ -145,11 +145,11 @@ class AutoresTablaScreen(Screen):
     def on_mount(self) -> None:
         table = self.query_one(DataTable)
         table.add_columns(*ROWS[0])
-        table.add.rows(ROWS[1:])
+        table.add_rows(ROWS[1:])
 
     @on(Button.Pressed, "#volver")
     def volver(self) -> None:
-        self.switch_screen("PrincipalScreen")    
+        self.app.switch_screen("PrincipalScreen")    
 
 class FrasesTablaScreen(Screen):
     BINDINGS = {
