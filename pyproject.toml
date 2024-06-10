@@ -11,7 +11,7 @@ textual = "^0.66.0"
 
 [tool.poetry.group.dev.dependencies]
 textual-dev = "^1.5.1"
-
+pytest = "^8.2.2"
 
 [build-system]
 requires = ["poetry-core"]
