@@ -4,8 +4,8 @@ class Controlador:
 
 #Pantalla Splash
 
-    def obtenerMensajeSplash(self) ->str :
-        pass
+    def obtenerMensajeSplash(self) ->dict:
+        return {"mensaje": "Motivharia"}
 
 #Pantalla Principal
 
