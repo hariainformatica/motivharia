@@ -1,5 +1,5 @@
 import pytest
-from motivharia.autor import Autor
+from motivharia.model.autor import Autor
 
 @pytest.fixture
 def autor():

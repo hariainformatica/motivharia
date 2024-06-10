@@ -1,4 +1,4 @@
-from motivharia.autor import Autor
+from motivharia.model.autor import Autor
 
 class ListaAutores:
     def __init__(self):

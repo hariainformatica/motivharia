@@ -1,4 +1,4 @@
-class ProveedorDatos:
+class Controlador:
     def __init__(self):
         pass
 

@@ -1,9 +1,9 @@
-from motivharia.proveedorfrasessql import ProveedorFrasesSQL
-from motivharia.proveedorfrasescsv import ProveedorFrasesCSV
-from motivharia.listafrases import ListaFrases
-from motivharia.frase import Frase
+from motivharia.model.proveedorfrasessql import ProveedorFrasesSQL
+from motivharia.model.proveedorfrasescsv import ProveedorFrasesCSV
+from motivharia.model.listafrases import ListaFrases
+from motivharia.model.frase import Frase
 
-from motivharia.proveedorautores import ProveedorAutores
+from motivharia.model.proveedorautores import ProveedorAutores
 
 class ProveedorFrases:
     def __init__(self, tipo, autosave=False):

@@ -1,7 +1,7 @@
 import pytest
 
-from motivharia.listaautores import ListaAutores
-from motivharia.autor import Autor
+from motivharia.model.listaautores import ListaAutores
+from motivharia.model.autor import Autor
 
 def test_create():
     lista_autores = ListaAutores()

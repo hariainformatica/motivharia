@@ -1,11 +1,11 @@
 import csv
 
-from motivharia.proveedorfrasesi import ProveedorFrasesI
-from motivharia.listafrases import ListaFrases
-from motivharia.frase import Frase
-from motivharia.autor import Autor
+from motivharia.model.proveedorfrasesi import ProveedorFrasesI
+from motivharia.model.listafrases import ListaFrases
+from motivharia.model.frase import Frase
+from motivharia.model.autor import Autor
 
-from motivharia.proveedorautores import ProveedorAutores
+from motivharia.model.proveedorautores import ProveedorAutores
 
 class ProveedorFrasesCSV(ProveedorFrasesI):
     def __init__(self, proveedorAutores):

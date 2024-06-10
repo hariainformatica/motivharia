@@ -1,7 +1,7 @@
-from motivharia.proveedorautoressql import ProveedorAutoresSQL
-from motivharia.proveedorautorescsv import ProveedorAutoresCSV
-from motivharia.listaautores import ListaAutores
-from motivharia.autor import Autor
+from motivharia.model.proveedorautoressql import ProveedorAutoresSQL
+from motivharia.model.proveedorautorescsv import ProveedorAutoresCSV
+from motivharia.model.listaautores import ListaAutores
+from motivharia.model.autor import Autor
 
 class ProveedorAutores:
     def __init__(self, tipo:str, autosave:bool=False):

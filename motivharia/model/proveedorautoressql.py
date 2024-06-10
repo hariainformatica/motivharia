@@ -1,10 +1,10 @@
 import sqlite3
 
-from motivharia.proveedorautoresi import ProveedorAutoresI
-from motivharia.listaautores import ListaAutores
-from motivharia.autor import Autor
+from motivharia.model.proveedorautoresi import ProveedorAutoresI
+from motivharia.model.listaautores import ListaAutores
+from motivharia.model.autor import Autor
 
-from motivharia.database import Database
+from motivharia.model.database import Database
 
 
 class ProveedorAutoresSQL(ProveedorAutoresI):

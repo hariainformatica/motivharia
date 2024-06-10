@@ -1,5 +1,5 @@
-from motivharia.autor import Autor
-from motivharia.listaautores import ListaAutores
+from motivharia.model.autor import Autor
+from motivharia.model.listaautores import ListaAutores
 
 class ProveedorAutoresI:
     def getAutores(self)->ListaAutores:

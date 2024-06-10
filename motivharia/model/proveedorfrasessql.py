@@ -1,10 +1,10 @@
 import sqlite3
 
-from motivharia.proveedorfrasesi import ProveedorFrasesI
-from motivharia.listafrases import ListaFrases
-from motivharia.frase import Frase
+from motivharia.model.proveedorfrasesi import ProveedorFrasesI
+from motivharia.model.listafrases import ListaFrases
+from motivharia.model.frase import Frase
 
-from motivharia.database import Database
+from motivharia.model.database import Database
 
 class ProveedorFrasesSQL(ProveedorFrasesI):
     def __init__(self) -> None:

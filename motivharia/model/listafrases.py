@@ -1,4 +1,4 @@
-from motivharia.frase import Frase
+from motivharia.model.frase import Frase
 
 class ListaFrases:
     def __init__(self):

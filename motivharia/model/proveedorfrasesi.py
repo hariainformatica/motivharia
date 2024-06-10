@@ -1,4 +1,4 @@
-from motivharia.listafrases import ListaFrases
+from motivharia.model.listafrases import ListaFrases
 
 class ProveedorFrasesI:
     def getFrases(self)->ListaFrases:

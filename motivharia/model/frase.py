@@ -1,4 +1,5 @@
-from motivharia.autor import Autor
+from motivharia.model.autor import Autor
+
 class Frase:
     def __init__(self, id:id, frase:str, autor:Autor):
         self.id = int(id)
