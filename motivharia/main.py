@@ -1,11 +1,11 @@
 from textual.app import App
 from textual.binding import Binding
 
-from motivharia.view.splashscreen import SplashScreen
-from motivharia.view.principalscreen import PrincipalScreen
-from motivharia.view.autorestablascreen import AutoresTablaScreen
-from motivharia.view.frasestablasscreen import FrasesTablaScreen
-from motivharia.view.acercascreen import AcercaScreen
+from view.splashscreen import SplashScreen
+from view.principalscreen import PrincipalScreen
+from view.autorestablascreen import AutoresTablaScreen
+from view.frasestablasscreen import FrasesTablaScreen
+from view.acercascreen import AcercaScreen
 
 
 class Aplicacion(App):
