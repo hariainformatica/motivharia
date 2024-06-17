@@ -2,11 +2,11 @@ from textual.app import App, ComposeResult
 from textual.screen import Screen
 from textual.widgets import DataTable, Button, Placeholder
 from textual.containers import Horizontal
+from textual import on
 
 
 class ListaAlumnos:
-    def leer(self):
-        return [
+    datos = [
                 ("id", "alumno"),
                 (4, "Joseph Schooling"),
                 (2, "Michael Phelps"),
@@ -18,6 +18,9 @@ class ListaAlumnos:
                 (1, "Aleksandr Sadovnikov"),
                 (10, "Darren Burns"),
             ]
+
+    def leer(self):
+        return self.datos
 
 class Ventana(Screen):
     CSS = """
@@ -38,17 +41,24 @@ class NuestraScreen(Screen):
     def compose(self) -> ComposeResult:
         yield DataTable()
         yield Button("hola")
-        yield Button("hola2")
+        yield Button("hola2", id="bHola2")
 
     def on_mount(self) -> None:
-        rows = ListaAlumnos().leer()
+        self.rows = ListaAlumnos().leer()
         table = self.query_one(DataTable)
-        table.add_columns(*rows[0])
-        table.add_rows(rows[1:])
+        table.add_columns(*self.rows[0])
+        table.add_rows(self.rows[1:])
+
+    @on(Button.Pressed, "#bHola2")
+    def bHola2Pressed(self):
+        self.rows.append((11, "Alvaro"))
+        self.app.pop_screen()
+        self.app.push_screen(NuestraScreen())
+
 
 class TableApp(App):
     def on_mount(self) -> None:
-        self.push_screen(Ventana())
+        self.push_screen(NuestraScreen())
 
 app = TableApp()
 if __name__ == "__main__":
